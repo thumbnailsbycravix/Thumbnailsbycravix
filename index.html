@@ -13,7 +13,7 @@
             --gold: #d4af37;
             --gold-light: #f3e5ab;
             --gold-dark: #b5952f;
-            --card-bg: rgba(26, 26, 26, 0.6); /* Slightly transparent for depth */
+            --card-bg: rgba(26, 26, 26, 0.6);
             --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             --premium-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -29,7 +29,6 @@
         }
 
         body {
-            /* Premium deep gradient background */
             background: radial-gradient(circle at 50% 0%, #1a1a1a 0%, var(--bg-color) 60%, var(--bg-color) 100%);
             color: var(--text-color);
             font-family: var(--font-main);
@@ -37,7 +36,6 @@
             overflow-x: hidden;
         }
 
-        /* Custom highlight color */
         ::selection {
             background-color: var(--gold);
             color: #000;
@@ -54,7 +52,6 @@
             color: var(--text-muted);
         }
 
-        /* Premium Gradient Text Effect */
         .gold-text {
             background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold-dark) 100%);
             -webkit-background-clip: text;
@@ -63,38 +60,17 @@
             text-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
         }
 
-        /* === CRAVIX GFX SHINE ANIMATION === */
+        /* === CRAVIX GFX LARGE BRAND TITLE === */
         .brand-title {
-            font-size: clamp(3.5rem, 10vw, 6.5rem); /* Makes the text significantly larger */
+            font-size: clamp(3.5rem, 10vw, 6.5rem);
             font-weight: 900;
             letter-spacing: 2px;
             margin-bottom: 0.5rem;
-            
-            /* The Shining Gradient Setup */
-            background: linear-gradient(
-                to right, 
-                var(--gold-dark) 20%, 
-                var(--gold) 40%, 
-                #ffffff 50%, /* The bright shine in the middle */
-                var(--gold) 60%, 
-                var(--gold-dark) 80%
-            );
-            background-size: 200% auto;
-            color: transparent;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
             -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
-            
-            /* The Continuous Animation */
-            animation: goldShine 3s linear infinite;
-            
-            /* Premium Outer Glow */
-            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
-        }
-
-        @keyframes goldShine {
-            to {
-                background-position: 200% center;
-            }
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
         }
 
         .text-center {
@@ -108,7 +84,6 @@
             margin: 0 auto;
         }
 
-        /* Premium Button */
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
@@ -174,15 +149,7 @@
         .hero .subtitle {
             font-size: clamp(1.1rem, 4vw, 1.5rem);
             color: var(--text-color);
-            margin-bottom: 1rem;
-        }
-
-        .hero .authority-line {
-            font-size: 0.9rem;
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 3rem;
-            letter-spacing: 1px;
+            margin-bottom: 3rem; /* Increased margin since the authority line was removed */
         }
 
         .video-wrapper {
@@ -447,7 +414,6 @@
             overflow: hidden;
         }
 
-        /* Shimmer effect setup for contact cards */
         .contact-card::after {
             content: '';
             position: absolute;
@@ -501,7 +467,6 @@
             position: relative;
         }
 
-        /* Subtle top glow for footer */
         footer::before {
             content: '';
             position: absolute;
@@ -543,7 +508,7 @@
                 flex: 1 1 calc(50% - 1.5rem);
             }
             .stat-item:hover {
-                transform: translateY(-10px); /* Lift up instead of right on desktop */
+                transform: translateY(-10px);
             }
             .pricing-grid {
                 flex-direction: row;
@@ -567,11 +532,10 @@
 
     <section class="hero text-center">
         <h1 class="brand-title reveal-up">CRAVIX GFX</h1>
-        <p class="subtitle reveal-up" style="transition-delay: 0.1s;">Crafting High-Impact Thumbnails for Global Creators.</p>
-        <p class="authority-line reveal-up" style="transition-delay: 0.2s;">2+ Years Experience • 400M+ Views Generated • 50+ Creators Served</p>
+        <p class="subtitle reveal-up" style="transition-delay: 0.1s;">Crafting High Impact Thumbnails for Global Creators.</p>
         
         <div class="video-wrapper reveal-up" style="transition-delay: 0.3s;">
-            <h3 class="gold-text">How CRAVIX GFX Helps Creators Dominate Click-Through Rate</h3>
+            <h3 class="gold-text">How CRAVIX GFX Helps Creators Dominate Click Through Rate</h3>
             
             <div class="video-container">
                 <video poster="https://picsum.photos/800/450?grayscale&blur=2" controls>
@@ -601,13 +565,13 @@
             <div class="stat-item reveal-up" style="transition-delay: 0.2s;">2+ Years Experience</div>
             <div class="stat-item reveal-up" style="transition-delay: 0.3s;">400M+ Views Generated</div>
             <div class="stat-item reveal-up" style="transition-delay: 0.4s;">50+ Creators Served</div>
-            <div class="stat-item reveal-up" style="transition-delay: 0.5s;">Performance-Focused Strategy</div>
+            <div class="stat-item reveal-up" style="transition-delay: 0.5s;">Performance Focused Strategy</div>
         </div>
     </section>
 
     <section id="work" class="text-center">
         <h2 class="reveal-up gold-text">Selected Work</h2>
-        <p class="reveal-up" style="transition-delay: 0.1s;">A curated showcase of high-impact visual executions.</p>
+        <p class="reveal-up" style="transition-delay: 0.1s;">A curated showcase of high impact visual executions.</p>
 
         <div class="work-grid">
             <div class="thumbnail-wrapper reveal-scale"><img src="images/hq720.jpg" alt="Thumbnail 1" loading="lazy"></div>
@@ -625,8 +589,8 @@
 
     <section id="about" class="text-center about-text">
         <h2 class="reveal-up gold-text">About CRAVIX GFX</h2>
-        <p class="reveal-up" style="transition-delay: 0.1s;">CRAVIX GFX is a performance-driven thumbnail design agency focused on helping creators stand out in competitive digital environments.</p>
-        <p class="reveal-up" style="transition-delay: 0.2s;">We specialize in crafting bold, high-CTR thumbnails tailored for gaming channels, finance educators, business creators, and lifestyle influencers targeting global audiences.</p>
+        <p class="reveal-up" style="transition-delay: 0.1s;">CRAVIX GFX is a performance driven thumbnail design agency focused on helping creators stand out in competitive digital environments.</p>
+        <p class="reveal-up" style="transition-delay: 0.2s;">We specialize in crafting bold, high CTR thumbnails tailored for gaming channels, finance educators, business creators, and lifestyle influencers targeting global audiences.</p>
         <p class="reveal-up" style="transition-delay: 0.3s;">We believe thumbnails are not just images. They are entry points to your content — and entry points determine growth.</p>
     </section>
 
@@ -667,7 +631,7 @@
                     <li>15 Thumbnails per Month</li>
                     <li>Dedicated Creative Direction</li>
                     <li>Priority Turnaround</li>
-                    <li>Long-Term Brand Consistency</li>
+                    <li>Long Term Brand Consistency</li>
                 </ul>
                 <div class="price">Custom <span>Pricing</span></div>
                 <p style="margin-top: 1rem; font-size: 0.9rem; text-align: left;">Contact for Details</p>
@@ -676,7 +640,7 @@
     </section>
 
     <section id="contact" class="text-center">
-        <h2 class="reveal-up gold-text">Ready to Elevate Your Click-Through Rate?</h2>
+        <h2 class="reveal-up gold-text">Ready to Elevate Your Click Through Rate?</h2>
         <p class="reveal-up" style="transition-delay: 0.1s;">If you're serious about growth, it’s time to treat your thumbnails like assets — not afterthoughts.<br>Let’s build visuals that demand attention.</p>
         
         <div class="contact-btn-wrapper reveal-up" style="transition-delay: 0.2s;">
