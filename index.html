@@ -80,8 +80,7 @@
 
         /* === LAYOUT & UTILITIES === */
         section {
-            /* Reduced general padding so mobile spacing isn't huge */
-            padding: 3rem 1.5rem; 
+            padding: 5rem 1.5rem; 
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -140,17 +139,18 @@
 
         /* === SECTION 1: HERO === */
         .hero {
+            min-height: 100vh; /* Pushes the whole section down to vertically center it */
             display: flex;
             flex-direction: column;
+            justify-content: center; /* Centers the content beautifully */
             align-items: center;
-            /* Significantly reduced top padding to fix the top gap */
-            padding: 2rem 1rem 3rem 1rem; 
+            padding: 2rem 1rem; 
         }
 
         .hero .subtitle {
             font-size: clamp(1.1rem, 4vw, 1.5rem);
             color: var(--text-color);
-            margin-bottom: 2rem; /* Adjusted for perfect breathing room */
+            margin-bottom: 3.5rem; /* Creates an even, balanced gap down to the video */
         }
 
         .video-wrapper {
@@ -162,7 +162,7 @@
 
         .video-wrapper h3 {
             font-size: 1.2rem;
-            margin-top: 0; /* REMOVED HIDDEN BROWSER MARGIN */
+            margin-top: 0; 
             margin-bottom: 1rem;
             max-width: 600px;
         }
@@ -499,12 +499,6 @@
 
         /* === RESPONSIVE QUERIES === */
         @media (min-width: 768px) {
-            section {
-                padding: 5rem 1.5rem; /* Restores spacing for desktop */
-            }
-            .hero {
-                padding: 6rem 1rem 3rem 1rem; /* Restores spacing for desktop */
-            }
             .btn {
                 width: auto;
             }
