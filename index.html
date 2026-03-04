@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRAVIX Studio | Premium Thumbnail Design Agency</title>
+    <title>CRAVIX GFX | Premium Thumbnail Design Agency</title>
     <style>
         /* === CSS VARIABLES & RESET === */
         :root {
@@ -61,6 +61,40 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+
+        /* === CRAVIX GFX SHINE ANIMATION === */
+        .brand-title {
+            font-size: clamp(3.5rem, 10vw, 6.5rem); /* Makes the text significantly larger */
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            
+            /* The Shining Gradient Setup */
+            background: linear-gradient(
+                to right, 
+                var(--gold-dark) 20%, 
+                var(--gold) 40%, 
+                #ffffff 50%, /* The bright shine in the middle */
+                var(--gold) 60%, 
+                var(--gold-dark) 80%
+            );
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            
+            /* The Continuous Animation */
+            animation: goldShine 3s linear infinite;
+            
+            /* Premium Outer Glow */
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+        }
+
+        @keyframes goldShine {
+            to {
+                background-position: 200% center;
+            }
         }
 
         .text-center {
@@ -135,12 +169,6 @@
             justify-content: center;
             align-items: center;
             padding: 2rem 1rem;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            letter-spacing: -1px;
-            margin-bottom: 0.5rem;
         }
 
         .hero .subtitle {
@@ -538,12 +566,12 @@
 <body>
 
     <section class="hero text-center">
-        <h1 class="gold-text reveal-up">CRAVIX Studio</h1>
+        <h1 class="brand-title reveal-up">CRAVIX GFX</h1>
         <p class="subtitle reveal-up" style="transition-delay: 0.1s;">Crafting High-Impact Thumbnails for Global Creators.</p>
         <p class="authority-line reveal-up" style="transition-delay: 0.2s;">2+ Years Experience • 400M+ Views Generated • 50+ Creators Served</p>
         
         <div class="video-wrapper reveal-up" style="transition-delay: 0.3s;">
-            <h3 class="gold-text">How CRAVIX Studio Helps Creators Dominate Click-Through Rate</h3>
+            <h3 class="gold-text">How CRAVIX GFX Helps Creators Dominate Click-Through Rate</h3>
             
             <div class="video-container">
                 <video poster="https://picsum.photos/800/450?grayscale&blur=2" controls>
@@ -563,7 +591,7 @@
     <section id="authority">
         <h2 class="reveal-up text-center gold-text">Performance Backed by Results.</h2>
         <div class="reveal-up text-center" style="transition-delay: 0.1s;">
-            <p>At CRAVIX Studio, every thumbnail is designed with one objective — performance.</p>
+            <p>At CRAVIX GFX, every thumbnail is designed with one objective — performance.</p>
             <p>We don’t just create visuals. We engineer attention.</p>
             <p>Over the past two years, our designs have supported creators across gaming, finance, and lifestyle niches — helping them generate over 400 million combined views.</p>
             <p>Our approach blends design psychology, niche research, and market positioning to ensure every thumbnail competes at the highest level.</p>
@@ -596,8 +624,8 @@
     </section>
 
     <section id="about" class="text-center about-text">
-        <h2 class="reveal-up gold-text">About CRAVIX Studio</h2>
-        <p class="reveal-up" style="transition-delay: 0.1s;">CRAVIX Studio is a performance-driven thumbnail design agency focused on helping creators stand out in competitive digital environments.</p>
+        <h2 class="reveal-up gold-text">About CRAVIX GFX</h2>
+        <p class="reveal-up" style="transition-delay: 0.1s;">CRAVIX GFX is a performance-driven thumbnail design agency focused on helping creators stand out in competitive digital environments.</p>
         <p class="reveal-up" style="transition-delay: 0.2s;">We specialize in crafting bold, high-CTR thumbnails tailored for gaming channels, finance educators, business creators, and lifestyle influencers targeting global audiences.</p>
         <p class="reveal-up" style="transition-delay: 0.3s;">We believe thumbnails are not just images. They are entry points to your content — and entry points determine growth.</p>
     </section>
@@ -672,10 +700,10 @@
     </section>
 
     <footer>
-        <h3 class="gold-text">CRAVIX Studio</h3>
+        <h3 class="gold-text">CRAVIX GFX</h3>
         <p>Premium Thumbnail Design Agency</p>
         <p>Serving Creators Worldwide</p>
-        <p class="copyright">&copy; 2026 CRAVIX Studio. All Rights Reserved.</p>
+        <p class="copyright">&copy; 2026 CRAVIX GFX. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -703,4 +731,4 @@
         });
     </script>
 </body>
-                </html>
+</html>
