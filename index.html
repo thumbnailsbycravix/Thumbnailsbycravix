@@ -65,6 +65,7 @@
             font-size: clamp(3.5rem, 10vw, 6.5rem);
             font-weight: 900;
             letter-spacing: 2px;
+            margin-top: 0;
             margin-bottom: 0.5rem;
             background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
             -webkit-background-clip: text;
@@ -79,7 +80,8 @@
 
         /* === LAYOUT & UTILITIES === */
         section {
-            padding: 5rem 1.5rem;
+            /* Reduced general padding so mobile spacing isn't huge */
+            padding: 3rem 1.5rem; 
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -138,18 +140,17 @@
 
         /* === SECTION 1: HERO === */
         .hero {
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            padding: 2rem 1rem;
+            /* Significantly reduced top padding to fix the top gap */
+            padding: 2rem 1rem 3rem 1rem; 
         }
 
         .hero .subtitle {
             font-size: clamp(1.1rem, 4vw, 1.5rem);
             color: var(--text-color);
-            margin-bottom: 3rem; /* Increased margin since the authority line was removed */
+            margin-bottom: 2rem; /* Adjusted for perfect breathing room */
         }
 
         .video-wrapper {
@@ -161,7 +162,8 @@
 
         .video-wrapper h3 {
             font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            margin-top: 0; /* REMOVED HIDDEN BROWSER MARGIN */
+            margin-bottom: 1rem;
             max-width: 600px;
         }
         
@@ -174,7 +176,7 @@
         .video-container {
             width: 90%;
             max-width: 800px;
-            margin: 1.5rem auto;
+            margin: 0 auto 1.5rem auto;
             background: #000;
             border: 1px solid rgba(212, 175, 55, 0.5);
             border-radius: 12px;
@@ -207,7 +209,7 @@
         .hero-btn-container {
             width: 100%;
             max-width: 400px;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
 
         /* === SECTION 2: AUTHORITY === */
@@ -215,7 +217,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
 
         .stat-item {
@@ -497,6 +499,12 @@
 
         /* === RESPONSIVE QUERIES === */
         @media (min-width: 768px) {
+            section {
+                padding: 5rem 1.5rem; /* Restores spacing for desktop */
+            }
+            .hero {
+                padding: 6rem 1rem 3rem 1rem; /* Restores spacing for desktop */
+            }
             .btn {
                 width: auto;
             }
@@ -695,4 +703,4 @@
         });
     </script>
 </body>
-                                                            </html>
+</html>
